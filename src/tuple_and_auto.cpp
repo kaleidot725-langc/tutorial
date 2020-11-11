@@ -65,9 +65,30 @@ void compare_tuple() {
     }
 }
 
+string concat(string a, string b) {
+    return a + b;
+}
+
+void auto_type() {
+    cout << "auto type" << endl;
+
+    string a = "Hello,";
+    string b = "World";
+    auto ab = concat(a, b);
+    cout << ab << endl;
+
+    vector<int> c = {1, 2, 3};
+    auto d = c;
+
+    for (auto elem : d) {
+        cout << elem << endl;
+    }
+}
+
 int main() {
     call_pair();
     call_tuple();
     compare_pairing();
     compare_tuple();
+    auto_type();
 }
