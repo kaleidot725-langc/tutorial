@@ -40,10 +40,22 @@ void operate_queue() {
 }
 
 void operate_priority_queue() {
+    cout << "operate priorty queue" << endl;
 
+    priority_queue<int> pq;
+    pq.push(10);
+    pq.push(3);
+    pq.push(6);
+    pq.push(1);
+
+    while (!pq.empty()) {
+        cout << "size " << pq.size() << " value " << pq.top() << endl;
+        pq.pop();
+    }   
 }
 
 int main() {
     operate_map();
     operate_queue();
+    operate_priority_queue();
 }
